@@ -39,5 +39,10 @@ namespace Spotify
             set { playtime = value; }
         }
 
+        public void Play(Song song)
+        {
+
+        }
+
     }
 }
