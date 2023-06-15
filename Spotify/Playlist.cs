@@ -89,5 +89,10 @@ namespace Spotify
 
         }
 
+        public void Play(Song song)
+        {
+
+        }
+
     }
 }
