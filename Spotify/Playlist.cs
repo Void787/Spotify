@@ -50,9 +50,16 @@ namespace Spotify
             this.user = Owner;
         }
 
-        public void Play()
+        public bool Play(Song song)
         {
-
+            if(Client.play == true)
+            {
+                Console.WriteLine("now playing: " + song.Title);
+                return true;
+            }
+            Console.WriteLine("there is no song currently playing");
+            return false;
+            
         }
 
         public void Pause()
@@ -85,11 +92,6 @@ namespace Spotify
         }
 
         public void Select_nr(Song Song)
-        {
-
-        }
-
-        public void Play(Song song)
         {
 
         }
