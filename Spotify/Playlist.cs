@@ -56,10 +56,11 @@ namespace Spotify
             {
                 Console.WriteLine("now playing: " + song.Title);
                 return true;
+            } else
+            {
+                Console.WriteLine("there is no song currently playing");
+                return false;
             }
-            Console.WriteLine("there is no song currently playing");
-            return false;
-            
         }
 
         public void Pause()
