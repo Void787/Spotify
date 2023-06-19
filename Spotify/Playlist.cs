@@ -57,6 +57,7 @@ namespace Spotify
 
         public void Pause()
         {
+            console.WriteLine(song.title + " has stoppend playing")
 
         }
 
