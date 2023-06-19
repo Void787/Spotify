@@ -14,6 +14,13 @@ namespace Spotify
         private string title;
         private double playtime;
         private String genre;
+        public Song(Artiest artiest, string title, double playtime, string genre)
+        {
+            this.artiest.Add(artiest);
+            this.title = title;
+            this.playtime = playtime;
+            this.genre = genre;
+        }
         public String Title {
           get  { return title; }
           set { title = value; }
@@ -37,8 +44,6 @@ namespace Spotify
         {
             get { return artiest.AsReadOnly(); }
         }
- 
-
         public Song(String Title, double Playtime, string Genre, Artiest artiest) {
             this.title = Title;
             this.playtime = Playtime;

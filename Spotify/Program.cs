@@ -4,14 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            Song song = new Song("",2,"", new Artiest());
+            double playtime = 3.17;
+            Artiest artiest = new Artiest(null, null, "The Baseballs"); ;
+            Song song = new Song(artiest, "california girls", playtime, "pop");
+            Client client = new Client(null, null, null, null);
 
-            song.Title = "New song";
-            foreach(Artiest a in song.Artiesten)
-            {
-                Console.WriteLine(a.name);
-            }
+            client.Play(song);
         }
     }
 }
