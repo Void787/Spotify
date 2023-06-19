@@ -9,11 +9,11 @@
  
 
                 Artiest artiest = new Artiest( null,null, "the man");
-                Artiest artiest2 = new Artiest(null, null, "the women");
                 Client client = new Client( null, null, null,null);
                 Song song = new Song ("the titel", 9.23 ,"a gernre", artiest);
+                Playlist playlist = new Playlist("the women", 9.55,null,null,null);
                 Album album = new Album("titel", 9.28, null, null);
-                album.Pause(song);
+                playlist.Pause(song);
 
                 Console.ReadLine(); 
             }
