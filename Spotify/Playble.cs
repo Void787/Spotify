@@ -8,12 +8,21 @@ namespace Spotify
 {
     internal class Playble
     {
+        private bool play;
+
+
         private string title;
         private double playtime;
         public String Title
         {
             get { return title; }
             set { title = value; }
+        }
+
+        public String Play
+        {
+            get { return play; }
+            set { play = value; }
         }
 
         public double Playtime
@@ -36,6 +45,7 @@ namespace Spotify
 
         public void Pause()
         {
+            console.WriteLine(song.title + " has stoppend playing")
 
         }
 

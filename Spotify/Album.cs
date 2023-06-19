@@ -55,6 +55,7 @@ namespace Spotify
         }
         public void Pause()
         {
+            console.WriteLine(song.title + " has stoppend playing")
 
         }
         public void shuffle(Playlist playlist, Album albums)

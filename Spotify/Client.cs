@@ -9,11 +9,17 @@ namespace Spotify
 {
     internal class Client
     {
+        private bool play;
         private List<Song> songs = new List<Song>();
         private List<Users> users = new List<Users>();
         private List<Album> albums = new List<Album>();
         private List<Playlist> playlist = new List<Playlist>();
 
+        public String Play
+        {
+            get { return play; }
+            set { play = value; }
+        }
         public ReadOnlyCollection<Song> nummers
         {
             get { return songs.AsReadOnly(); }
@@ -31,8 +37,9 @@ namespace Spotify
             get { return playlist.AsReadOnly(); }
         }
 
-        public Client(Song songs, Users users, Album albums, Playlist playlist) 
+        public Client(bool Play, Song songs, Users users, Album albums, Playlist playlist) 
         {
+            this.play = Play;
             this.albums.Add(albums);
             this.users.Add(users);
             this.songs.Add(songs);
@@ -43,8 +50,13 @@ namespace Spotify
         {
             Console.WriteLine("now playing: " + song.Title);
         }
-        public void Pause() {
-        
+        public bool Pause(Song song, ) {
+            if (play == true)
+            {
+                console.WriteLine(song.title + " has stoppend playing")
+                    return false
+            }
+            
         }
         public void Select_nr(int nr)
         {
