@@ -50,9 +50,9 @@ namespace Spotify
             this.user = Owner;
         }
 
-        public void Play()
+        public void Play(Song song)
         {
-
+            Console.WriteLine("now playing: " + song.Title);
         }
 
         public void Pause(Song song)

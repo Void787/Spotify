@@ -41,10 +41,9 @@ namespace Spotify
             this.playlist.Add(playlist);
         }
 
-        public void Play()
+        public void Play(Song song)
         {
-
-
+            Console.WriteLine("now playing: " + song.Title);
         }
         public void Pause(Song song)
         {
