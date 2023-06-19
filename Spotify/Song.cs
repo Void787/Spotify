@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace Spotify
 {
     internal class Song
-    {         
+    {
+        private bool play;
         private List<Artiest> artiest = new List<Artiest>();     
         private string title;
         private double playtime;
@@ -17,7 +18,11 @@ namespace Spotify
           get  { return title; }
           set { title = value; }
         }
-
+        public String Play
+        {
+            get { return play; }
+            set { play = value; }
+        }
         public double Playtime
         {
             get { return Playtime; }
@@ -39,6 +44,23 @@ namespace Spotify
             this.playtime = Playtime;
             this.genre = Genre;
             this.artiest.Add(artiest);
+        }
+
+        public void Play()
+        {
+
+        }
+
+        public void Pause()
+        {
+            console.WriteLine(song.title + " has stoppend playing")
+
+        }
+ 
+
+            public void skip(Song song)
+        {
+
         }
     }
 }
