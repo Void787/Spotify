@@ -63,12 +63,12 @@ namespace Spotify
         {
 
         }
-        public Select_Playlist(Playlist playlist)
+/*        public Select_Playlist(Playlist playlist)
         {
              playlist = new Playlist();
   
             return playlist;
-        }
+        }*/
     }
         
 }

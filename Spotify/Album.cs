@@ -49,9 +49,9 @@ namespace Spotify
             this.artiest = artiest;
             this.song = song;
         }
-        public void Play()
+        public void Play(Song song)
         {
-
+            Console.WriteLine("now playing: " + song.Title);
         }
         public void Pause()
         {
