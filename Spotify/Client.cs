@@ -15,11 +15,6 @@ namespace Spotify
         private List<Album> albums = new List<Album>();
         private List<Playlist> playlist = new List<Playlist>();
 
-        public String Play
-        {
-            get { return play; }
-            set { play = value; }
-        }
         public ReadOnlyCollection<Song> nummers
         {
             get { return songs.AsReadOnly(); }
@@ -37,9 +32,9 @@ namespace Spotify
             get { return playlist.AsReadOnly(); }
         }
 
-        public Client(bool Play, Song songs, Users users, Album albums, Playlist playlist) 
+        public Client( Song songs, Users users, Album albums, Playlist playlist)
         {
-            this.play = Play;
+
             this.albums.Add(albums);
             this.users.Add(users);
             this.songs.Add(songs);
@@ -51,14 +46,14 @@ namespace Spotify
 
 
         }
-        public bool Pause(Song song, ) {
-            if (play == true)
-            {
-                console.WriteLine(song.title + " has stoppend playing")
-                    return false
-            }
-            
+        public void Pause(Song song)
+        {
+            Console.WriteLine(song.Title + " has stopped playing");
+
+
         }
+
+
         public void Select_nr(int nr)
         {
 
@@ -72,7 +67,7 @@ namespace Spotify
         {
 
         }
-        public void Delete_Playlist(Playlist playlist) 
+        public void Delete_Playlist(Playlist playlist)
         {
         }
         public void Nextpage(int nr)

@@ -5,13 +5,16 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            Song song = new Song("",2,"", new Artiest());
+ 
 
-            song.Title = "New song";
-            foreach(Artiest a in song.Artiesten)
-            {
-                Console.WriteLine(a.name);
+                Artiest artiest = new Artiest( null,null, "balls");
+                Client client = new Client( null, null, null,null);
+                Song song = new Song ("the titel", 9.23 ,"a gernre", artiest);
+                client.Pause(song);
+
+                Console.ReadLine(); 
             }
         }
     }
-}
+
+
