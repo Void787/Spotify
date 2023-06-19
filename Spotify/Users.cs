@@ -49,11 +49,15 @@ namespace Spotify
         }
         public void Showsongs(List<Song> songs) { }
 
-        public List<Song> Add_nr_to_playlist( List <Playlist> playlist)
+        public List<Song> Add_nr_to_playlist(List<Playlist> playlist)
         {
-            List<Song> song = new List<Song>();
-            return song;
+            List<Song> songs = new List<Song>();
+            // Add songs to the list
+            // Example: songs.Add(new Song(...));
+
+            return songs;
         }
+
 
         public void Add_Playlist(List<Playlist> playlist)
         {
@@ -63,12 +67,15 @@ namespace Spotify
         {
 
         }
-/*        public Select_Playlist(Playlist playlist)
+
+/*        public Playlist Select_Playlist()
+
         {
-             playlist = new Playlist();
-  
+*//*            Playlist playlist = new Playlist();*//*
+
             return playlist;
         }*/
+
     }
-        
+
 }

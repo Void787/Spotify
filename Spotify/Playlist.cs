@@ -55,9 +55,9 @@ namespace Spotify
             Console.WriteLine("now playing: " + song.Title);
         }
 
-        public void Pause()
+        public void Pause(Song song)
         {
-            console.WriteLine(song.title + " has stoppend playing")
+            Console.WriteLine(song.Title + " has stopped playing");
 
         }
 

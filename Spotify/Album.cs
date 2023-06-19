@@ -55,7 +55,8 @@ namespace Spotify
         }
         public void Pause()
         {
-            console.WriteLine(song.title + " has stoppend playing")
+  /*          Console.WriteLine(song.title + " has stopped playing");*/
+
 
         }
         public void shuffle(Playlist playlist, Album albums)
@@ -96,9 +97,6 @@ namespace Spotify
 
         }
 
-        public void shuffle(Song song)
-        {
 
-        }
     }
 }

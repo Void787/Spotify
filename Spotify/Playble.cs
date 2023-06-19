@@ -19,17 +19,13 @@ namespace Spotify
             set { title = value; }
         }
 
-        public String Play
-        {
-            get { return play; }
-            set { play = value; }
-        }
 
         public double Playtime
         {
-            get { return Playtime; }
-            set { Playtime = value; }
+            get { return playtime; }
+            set { playtime = value; }
         }
+
 
         public Playble(string Title, double Playtime)
         {
@@ -45,7 +41,8 @@ namespace Spotify
 
         public void Pause()
         {
-            console.WriteLine(song.title + " has stoppend playing")
+            Console.WriteLine(this.title + " has stopped playing");
+
 
         }
 
