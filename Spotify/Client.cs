@@ -93,5 +93,9 @@ namespace Spotify
         {
             albums.Add(album);
         }
+        public void Add_nummer_to_playlist(Song song, Playlist playlist)
+        {
+                playlist.Add_nr_playlist(song);
+        }
     }
 }

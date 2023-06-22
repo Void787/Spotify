@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace Spotify
 {
-    internal class Playlist
+    internal class Playlist 
     {
         private List<Song> Songs = new List<Song>();
         private List<Album> Albums = new List<Album>();
@@ -66,9 +66,9 @@ namespace Spotify
 
         }
 
-        public void Add_nr_playlist(Playlist playlist, Song songs)
+        public void Add_nr_playlist(Song songs)
         {
-
+            Songs.Add(songs);
         }
 
         public void skip(Song song)

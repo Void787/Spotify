@@ -7,20 +7,14 @@ using System.Threading.Tasks;
 
 namespace Spotify
 {
-    internal class Song
+    internal class Song 
     {
         private bool play;
         private List<Artiest> artiest = new List<Artiest>();     
         private string title;
         private double playtime;
         private String genre;
-        public Song(Artiest artiest, string title, double playtime, string genre)
-        {
-            this.artiest.Add(artiest);
-            this.title = title;
-            this.playtime = playtime;
-            this.genre = genre;
-        }
+        
         public String Title {
           get  { return title; }
           set { title = value; }
@@ -46,6 +40,7 @@ namespace Spotify
             this.genre = Genre;
             this.artiest.Add(artiest);
         }
+
 
         public void Play()
         {
