@@ -61,9 +61,9 @@ namespace Spotify
 
         }
 
-        public void Delete_nr(int nr, Playlist playlist)
+        public void Delete_nr_playlist(Song songs)
         {
-
+            Songs.Remove(songs);
         }
 
         public void Add_nr_playlist(Song songs)

@@ -62,12 +62,13 @@ namespace Spotify
 
 
         }
-        public void Delete_nr(int nr, Playlist playlist)
+        public void Delete_nr(Song songs Playlist playlist)
         {
-
+            playlist.Delete_nr_playlist(songs);
         }
         public void Delete_Playlist(Playlist playlist)
         {
+            
         }
         public void Nextpage(int nr)
         {
