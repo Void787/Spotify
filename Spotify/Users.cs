@@ -33,7 +33,7 @@ namespace Spotify
         }
         public void Addfriend(Users friend)
         {
-
+            
         }
         public void Removefriend(Users friend)
         {
@@ -41,7 +41,10 @@ namespace Spotify
         }
         public void  Showfriends(List<Users> friend)
         {
-
+            foreach (Users user in friend)
+            {
+                Console.WriteLine(user.Name);
+            }
         }
         public void Showplaylist(List<Playlist> playlist)
         {
