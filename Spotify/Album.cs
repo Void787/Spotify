@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Spotify
 {
-    internal class Album
+    internal class Album 
     {
         private string title;
         private double playtime;

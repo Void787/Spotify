@@ -8,7 +8,7 @@ namespace Spotify
 {
     internal class Playble
     {
-        private bool play;
+
 
 
         private string title;
