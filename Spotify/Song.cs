@@ -46,7 +46,8 @@ namespace Spotify
         {
 
         }
-
+        
+        //Pauzeren 
         public void Pause()
         {
            Console.WriteLine(this.title + " has stopped playing");

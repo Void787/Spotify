@@ -21,6 +21,7 @@ namespace Spotify
             set { title = value; }
         }
 
+        // pak de sum van alle songs in album om de tijd te berekenen
         public double Playtime
         {
             get
