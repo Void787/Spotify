@@ -7,34 +7,58 @@ using System.Threading.Tasks;
 
 namespace Spotify
 {
-    internal class Song
+    internal class Song 
     {
+        private bool play;
+        private List<Artiest> artiest = new List<Artiest>();     
+        private string title;
+        private double playtime;
+        private String genre;
+        
         public String Title {
           get  { return title; }
           set { title = value; }
         }
-        private string title;
-        private double Playtime
+
+        public double Playtime
         {
-            get { return Playtime; }
-            set { Playtime = value; }
+            get { return playtime; }
+            set { playtime = value; }
         }
-        private String Genre
+        public string Genre
         {
-            get { return Genre; }
-            set { Genre = value; }
+            get { return genre; }
+            set { genre = value; }
         }
         public ReadOnlyCollection<Artiest> Artiesten
         {
             get { return artiest.AsReadOnly(); }
         }
-        private List<Artiest> artiest = new List<Artiest>();
-
         public Song(String Title, double Playtime, string Genre, Artiest artiest) {
             this.title = Title;
-            this.Playtime = Playtime;
-            this.Genre = Genre;
+            this.playtime = Playtime;
+            this.genre = Genre;
             this.artiest.Add(artiest);
+        }
+
+
+        public void Play()
+        {
+
+        }
+        
+        //Pauzeren 
+        public void Pause()
+        {
+           Console.WriteLine(this.title + " has stopped playing");
+
+
+        }
+
+
+        public void skip(Song song)
+        {
+
         }
     }
 }

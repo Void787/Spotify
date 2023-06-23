@@ -8,11 +8,11 @@ using System.Xml.Linq;
 
 namespace Spotify
 {
-    internal class Playlist
+    internal class Playlist 
     {
         private List<Song> Songs = new List<Song>();
         private List<Album> Albums = new List<Album>();
-        private Users user = new Users();
+        private Users user;
         private String title;
         private Double playtime;
         public ReadOnlyCollection<Song> nummers
@@ -23,10 +23,9 @@ namespace Spotify
         {
             get { return Albums.AsReadOnly(); }
         }
-        public Users user
+        public Users Owner
         {
-            get { return name; }
-            set { name = value; }
+            get { return user; }
         }
         public String Title
         {
@@ -35,11 +34,58 @@ namespace Spotify
         }
         public double Playtime
         {
-            get { return playtime; }
-            set { playtime = value; }
+            get { foreach (Song song in Songs)
+                {
+                    playtime += song.Playtime;
+                } 
+                return playtime; }
+
+        }
+        public Playlist( String Title, double Playtime, Users Owner, Album Albums, Song Songs ) 
+        {
+            this.playtime = Playtime;
+            this.title = Title;
+            this.Albums.Add(Albums);
+            this.Songs.Add(Songs);
+            this.user = Owner;
         }
 
         public void Play(Song song)
+        {
+            Console.WriteLine("now playing: " + song.Title);
+        }
+
+        public void Pause(Song song)
+        {
+            Console.WriteLine(song.Title + " has stopped playing");
+
+        }
+
+        public void Delete_nr_playlist(Song songs)
+        {
+            Songs.Remove(songs);
+        }
+
+        public void Add_nr_playlist(Song songs)
+        {
+            Songs.Add(songs);
+        }
+
+        public void skip(Song song)
+        {
+
+        }
+
+        public void shuffle(Song song)
+        {
+
+        }
+        public void Show_playlist( Playlist playlist)
+        {
+
+        }
+
+        public void Select_nr(Song Song)
         {
 
         }
